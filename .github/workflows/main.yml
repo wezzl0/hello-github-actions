@@ -8,8 +8,9 @@ jobs:
     name: Hello world action
     runs-on: windows-latest
     steps:
-      - run: echo ${{ runner.os == 'Linux' && 'bash' || 'powershell' }}
+      - run: echo ${{ github.repository }}
       - uses: actions/checkout@v1
-      - uses: ./action-a
         with:
-          MY_NAME: "Mona"
+          repository: 'wezzl0/Game_Engine_Asteroids'
+      - run: echo ${{ github.repository }}
+
