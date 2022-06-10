@@ -8,9 +8,8 @@ jobs:
     name: Hello world action
     runs-on: windows-latest
     steps:
-      - run: echo ${{ github.repository }}
-      - uses: actions/checkout@v1
-        with:
-          repository: 'wezzl0/Game_Engine_Asteroids'
-      - run: echo ${{ github.repository }}
+      - name: Print GitHub event action
+        run: |
+          echo "${{ github.event.action }}"
+   
 
