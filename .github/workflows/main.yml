@@ -11,5 +11,5 @@ jobs:
       - name: Print GitHub event action
         run: |
           echo "${{ github.event.merged }}"
-   
-
+          echo "${{ github.event.head.ref }}"
+          echo "${{ github.event.pull_request.merged }}"
