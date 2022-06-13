@@ -1,7 +1,7 @@
 name: A workflow for my Hello World file
 on:
-  push:
-  workflow_dispatch:
+  pull_request:
+    types: [closed]
 
 jobs:
   build:
@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Print GitHub event action
         run: |
-          echo "${{ github.event.ref }}"
+          echo "${{ github.event.merged }}"
    
 
