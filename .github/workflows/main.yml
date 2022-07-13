@@ -7,7 +7,11 @@ jobs:
     name: Hello world action
     runs-on: windows-latest
     steps:
-      - name: Print GitHub event action
-        run: "Testing" >> $GITHUB_STEP_SUMMARY
-      - name: Print GitHub event action
+      - name: 1
+        run: echo "Testing" >> $GITHUB_STEP_SUMMARY
+      - name: 2
         run: echo $GITHUB_STEP_SUMMARY
+      - name: 3
+        run: echo "Testing" >> ${GITHUB_STEP_SUMMARY}
+      - name: 4
+        run: echo ${GITHUB_STEP_SUMMARY}
