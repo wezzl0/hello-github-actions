@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   
 env:
-  TEST: "1.2"
+  TEST: 1.2
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Test summary action
-        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{ github.repository }}
+        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{ env.TEST }}
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           joke: "Helo"
