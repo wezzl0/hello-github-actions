@@ -1,6 +1,9 @@
 name: A workflow for my Hello World file
 on:
   workflow_dispatch:
+  
+env:
+  test: 1.2
 
 jobs:
   build:
@@ -8,7 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Test summary action
-        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@main
+        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{test}}
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
-          joke: "Helllo"
+          joke: "Helo"
