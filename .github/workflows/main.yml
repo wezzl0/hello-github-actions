@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Test summary action
-        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{test}}
+        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{env.test}}
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           joke: "Helo"
