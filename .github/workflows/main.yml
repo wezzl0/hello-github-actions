@@ -1,15 +1,14 @@
 name: A workflow for my Hello World file
 on:
   workflow_dispatch:
-  
-env:
-  TEST: 1.2
 
 jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest
     steps:
+      - env:
+          TEST: 1.2
       - name: Test summary action
         uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@main
         with:
