@@ -18,3 +18,5 @@ jobs:
       - name: testin
         run: |
           echo "$TEST"
+          $TEST = 1.3
+          echo "$TEST"
