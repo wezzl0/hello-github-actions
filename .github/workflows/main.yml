@@ -17,4 +17,4 @@ jobs:
           joke: "Helo"
       - name: testin
         run: |
-          "echo $TEST"
+          echo "$TEST"
