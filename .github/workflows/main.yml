@@ -8,10 +8,13 @@ env:
 jobs:
   build:
     name: Hello world action
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Test summary action
-        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@${{ env.TEST }}
+        uses: wezzl0/writing-javascript-actions/.github/actions/issue-maker@main
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           joke: "Helo"
+      - name: testin
+        run: |
+          "echo $TEST"
